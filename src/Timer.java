@@ -11,10 +11,11 @@ public class Timer {
         boolean TrueTime = false;
         String getTime;
         double numberOfHours = 0;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         while (!TrueTime) {
 
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            try {
 
                 System.out.println("Введите номер минуты: ");
                 getTime = reader.readLine();
@@ -25,8 +26,10 @@ public class Timer {
                 }
 
                 TrueTime = true;
-            } catch (NumberFormatException  | IOException e) {
-                e.printStackTrace();
+                reader.close();
+            }
+            catch (NumberFormatException  | IOException e) {
+                System.err.println("Введены некорректные данные!");
             }
         }
         return numberOfHours;
