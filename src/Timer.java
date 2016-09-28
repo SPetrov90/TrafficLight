@@ -7,7 +7,7 @@ public class Timer {
      * Метод получает от пользователя номер минуты (double)
      * @return время прошеднее с начала работы светофора (>0)
      */
-    public static double getHoursNumber() {
+    public  double getHoursNumber() {
         boolean TrueTime = false;
         String getTime;
         double numberOfHours = 0;
