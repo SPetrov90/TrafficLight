@@ -1,0 +1,4 @@
+
+interface Light {
+    void light();
+}
